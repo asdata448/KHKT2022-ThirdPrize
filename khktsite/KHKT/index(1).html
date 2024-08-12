@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+    <title>KHKT SITE</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+       
+        <ul id="main_menu">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="story.html">Mẫu Truyện</a></li> 
+        </ul>
+        <div class="clearfix"></div>
+        
+    
+    </div>
+    <div id="main">
+    <div id="search-box">
+
+        <input type="text" id ="search-text" value="" placeholder="Nhập từ cần chuyển">
+        <button onclick="myFunction()" id="search-button" ><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div id="answer">
+
+            <p>Từ đã chuyển: </p>
+            <p id ="ans"></p>
+
+        </div>
+        
+        <script>
+
+            var before = ["Cái l*n má",
+                "Con m* nó",
+                "Con m* nó rồi",
+                "Vãi l*n",
+                "Đ* má",
+                "Có cái l*n",
+                "Con điên",
+                "Con c*c",
+                "Ch* má",
+                "Vãi cả l*n",
+                "Thấy mẹ", 
+                "Cái l*n",
+                "Lòi l*n",
+                "Con phò",
+                "Phò",
+                "Chó",
+                "Đầu bu*i",
+                "Vãi c*c",
+                "Bu*i",
+                "Con đĩ"]
+
+            var after = ["Cái lùm mía",
+                "Cơm mẹ nấu",
+                "Cơm mẹ nấu rồi",
+                "Vật lộn, vậy luôn",
+                "Đậu xanh rau má",
+                "Có cái beep",
+                "Nha đầu ngốc",
+                "Cúc cu",
+                "Chào mào",
+                "Vãi cả linh hồn",
+                "Thấy mồ, thấy mẹo",
+                "Cái lon",
+                "Lợn lòi",
+                "Con pò",
+                "Pò",
+                "Chá, chóa",
+                "Đầu bưởi",
+                "Vải cực, Vãi đạn",
+                "Bưởi",
+                "Con đĩa"
+                
+                ]
+
+            const short = ["","cmn","cmnr","vl","","","","cc","","vcl"]
+           
+            function myFunction(){
+                var check = false;
+                var input = document.getElementById("search-text").value;
+                console.log(input);
+        
+                for (let i = 0; i<=before.length;i++){
+                    
+                    
+                    if (input == before[i]){
+
+                        document.getElementById("ans").innerHTML = after[i];
+                        check = true;
+
+                    }
+
+                }
+                if (check == false){
+
+                    document.getElementById("ans").innerHTML = "hãy nhập lại!"
+
+                }
+                
+
+            }
+
+        </script>
+    </div>
+    
+
+
+</div>
+    
+    
+</body>
+</html>

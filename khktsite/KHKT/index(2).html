@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+    <title>KHKT SITE</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+       
+        <ul id="main_menu">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="story.html">Mẫu Truyện</a></li> 
+        </ul>
+        <div class="clearfix"></div>
+        
+    
+    </div>
+    <div id="main">
+    <div id="search-box">
+
+        <a id = "search-text" style="font-size: 25px;">Nhập từ cần chuyển:</a>
+        <select name="word" id="words" style="font-size: 20px;">
+            
+            <option value="0">Cái l*n má</option>
+            <option value="1">Con m* nó (cmn)</option>
+            <option value="2">Con m* nó rồi (cmnr)</option>
+            <option value="3">Vãi l*n (vl)</option>
+            <option value="4">Đ* má</option>
+            <option value="5">Có cái l*n</option>
+            <option value="6">Con điên</option>
+            <option value="7">Con c*c (cc)</option>
+            <option value="8">Ch* má</option>
+            <option value="9">Vãi cả l*n (vcl)</option>
+            <option value="10">Thấy mẹ </option>
+            <option value="11">Cái l*n</option>
+            <option value="12">Lòi l*n</option>
+            <option value="13">Con phò</option>
+            <option value="14">Phò</option>
+            <option value="15">Chó</option>
+            <option value="16">Đầu bu*i</option>
+            <option value="17">Vãi c*c</option>
+            <option value="18">Bu*i</option>
+            <option value="19">Con đĩ</option>
+    
+        </select>
+        <div id="answer">
+
+            <p style="font-size: 25px;">Từ đã chuyển: </p>
+            <p id ="ans" style="font-size: 25px;">Cái lùm mía</p>
+
+        </div>
+        
+        <script>
+
+var after = ["Cái lùm mía",
+                "Cơm mẹ nấu",
+                "Cơm mẹ nấu rồi",
+                "Vật lộn, vậy luôn",
+                "Đậu xanh rau má",
+                "Có cái beep",
+                "Nha đầu ngốc", 
+                "Cúc cu",
+                "Chào mào",
+                "Vãi cả linh hồn",
+                "Thấy mồ, thấy mẹo",
+                "Cái lon",
+                "Lợn lòi",
+                "Con pò",
+                "Pò",
+                "Chá, chóa",
+                "Đầu bưởi",
+                "Vải cực, Vãi đạn",
+                "Bưởi",
+                "Con đĩa"
+                
+                ]
+
+        const wordsselect = document.getElementById("words");
+        wordsselect.addEventListener('change', (e) => {
+
+            const value = e.target.value;
+            let word = document.getElementById("ans");
+
+            for (let i = 0;i<=after.length;i++){
+
+                if (i == value){
+
+                    word.innerHTML = after[i];
+
+                }
+
+            }
+
+        })
+       
+
+        </script>
+    </div>
+
+</div>
+    
+    
+</body>
+</html>
